@@ -1,0 +1,21 @@
+Simple template tag for Django. This can be used to simplify the creation of forms inside templates.
+
+Copy the templatetags folder into the required app in your Django project (location is irrelevant, 
+the modules will be automatically imported on project startup).
+
+Sample template usage:
+
+{% load pagerchecker %}
+<form method="post" target="_self">
+<table>
+{% for field in form %}
+{{ forloop.counter|tablerow_start:2 }}
+<td align='right'>{{ field.label_tag }}</td>
+<td align='left'>{{ field }}</td>
+{{ forloop.counter|tablerow_end:2 }}
+{% endfor %}
+</table>
+<input type="submit" value="submit"/>
+</form>
+</div>
+
