@@ -3,7 +3,7 @@ Simple template tag for Django. This can be used to simplify the creation of for
 Copy the templatetags folder into the required app in your Django project (location is irrelevant, 
 the modules will be automatically imported on project startup).
 
-Sample template usage:
+Sample template usage (replace number 2 in "tablerow_start:2" and "tablerow_end:2" wit number of desired columns:
 
 {% load pagerchecker %}
 <form method="post" target="_self">
